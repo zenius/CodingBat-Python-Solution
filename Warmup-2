@@ -25,7 +25,7 @@ Solution;
             to_return += str[:i+1]
           return to_return
 
-# array_front9 
+#array_front9 
 Given an array of ints, return True if one of the first 4 elements in the array is a 9. 
 The array length may be less than 4.
 
