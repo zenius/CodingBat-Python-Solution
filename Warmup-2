@@ -1,0 +1,28 @@
+#string_times 
+Given a string and a non-negative int n, return a larger string that is n copies of the original string.
+
+Some Test Cases: 
+string_times('Hi', 2) → 'HiHi'
+string_times('Hi', 3) → 'HiHiHi'
+string_times('Hi', 1) → 'Hi'
+
+Solution: 
+        def string_times(str, n):
+           return str*n
+
+#string_splosion 
+Given a non-empty string like "Code" return a string like "CCoCodCode".
+
+Some Test Cases: 
+string_splosion('Code') → 'CCoCodCode'
+string_splosion('abc') → 'aababc'
+string_splosion('ab') → 'aab'
+
+Solution; 
+        def string_splosion(str):
+          to_return =''
+          for i in range(len(str)):
+            to_return += str[:i+1]
+          return to_return
+          
+         
