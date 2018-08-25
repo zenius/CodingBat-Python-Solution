@@ -1,0 +1,53 @@
+# sleep_in 
+The parameter weekday is True if it is a weekday, and the parameter vacation is True if we are on vacation.
+We sleep in if it is not a weekday or we're on vacation. Return True if we sleep in.
+
+Some Test Cases: 
+sleep_in(False, False) → True
+sleep_in(True, False) → False
+sleep_in(False, True) → True
+
+Solution:
+        def sleep_in(weekday, vacation):
+          return not weekday or vacation
+
+#diff21 
+Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.
+
+Some Test Cases: 
+diff21(19) → 2
+diff21(10) → 11
+diff21(21) → 0
+
+Solution: 
+        def diff21(n):
+          if n > 21: 
+            return abs(n-21)*2
+          else: 
+            return abs(n-21)
+  
+  #near_hundred 
+Given an int n, return True if it is within 10 of 100 or 200. Note: abs(num) computes the absolute value of a number.
+
+Some Test Cases: 
+near_hundred(93) → True
+near_hundred(90) → True
+near_hundred(89) → False
+
+Solution: 
+        def near_hundred(n):
+         return abs(n-100) <=10 or abs(n-200)<=10
+         
+#missing_char 
+Given a non-empty string and an int n, return a new string where the char at index n has been removed. 
+The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).
+
+Some Test Cases: 
+missing_char('kitten', 1) → 'ktten'
+missing_char('kitten', 0) → 'itten'
+missing_char('kitten', 4) → 'kittn'
+
+Solution: 
+      def missing_char(str, n):
+       return str[:n] + str[n+1:]  
+
