@@ -109,4 +109,57 @@ Solution:
             if num==9: 
               count_9 +=1
           return count_9
+          
+#array_front9 
+Given an array of ints, return True if one of the first 4 elements in the array is a 9. 
+The array length may be less than 4.
 
+Some Test Cases: 
+array_front9([1, 2, 9, 3, 4]) → True
+array_front9([1, 2, 3, 4, 9]) → False
+array_front9([1, 2, 3, 4, 5]) → False          
+
+Solution: 
+        def array_front9(nums):
+          # First figure the end for the loop
+          end = len(nums)
+          if end > 4:
+            end = 4
+          for i in range(end):  # loop over index [0, 1, 2, 3]
+            if nums[i] == 9:
+              return True
+          return False
+
+#array123 
+Given an array of ints, return True if the sequence of numbers 1, 2, 3 appears in the array somewhere.
+
+Some Test Cases: 
+array123([1, 1, 2, 3, 1]) → True
+array123([1, 1, 2, 4, 1]) → False
+array123([1, 1, 2, 1, 2, 3]) → True
+
+Solution: 
+        def array123(nums):
+          size = len(nums)-2    #bound the range
+          for i in range(size):  
+            if nums[i]==1 and nums[i+1]==2 and nums[i+2] ==3: 
+              return True 
+          return False
+
+#string_match 
+Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring. 
+So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings appear in the same place in both strings.
+
+Some Test Cases: 
+string_match('xxcaazz', 'xxbaaz') → 3
+string_match('abc', 'abc') → 2
+string_match('abc', 'axc') → 0
+
+Solution: 
+        def string_match(a, b):
+          count = 0 
+          size = len(a)-1 if len(a)< len(b) else len(b) -1
+          for i in range(size): 
+            if a[i:i+2] ==b[i:i+2]:
+                count +=1
+          return count
