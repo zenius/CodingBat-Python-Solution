@@ -33,10 +33,11 @@ string_splosion('ab') → 'aab'
 
 Solution; 
         def string_splosion(str):
-          to_return =''
-          for i in range(len(str)):
-            to_return += str[:i+1]
-          return to_return
+          result =''
+          size = len(str)
+          for i in range(size):
+            result += str[:i+1]
+          return result
 
 #string_bits 
 Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
